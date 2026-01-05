@@ -10,6 +10,7 @@ body {
     height: 100vh;
     display: flex;
     background: #110f18;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .navbar {
@@ -59,4 +60,8 @@ body {
   width: 100%;
   height: 3px;
   background: #e10600;
+}
+
+.registration {
+    padding-left: 150px;
 }
