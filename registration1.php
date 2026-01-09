@@ -19,7 +19,7 @@
 <body>
     <nav class="navbar">
         <div class="nav-inner">
-            <a href="#" class="nav-logo">
+            <a href="drivers.php" class="nav-logo">
                 <img src="images/F1.svg.png" alt="F1 Logo">
             </a>
         </div>
@@ -30,6 +30,7 @@
     </div>
     
     <div class="registration-form">
+      <div class="rg">
         <form action="drivers.php">
             <div class="input-box">
                 <p class="input-p">Title</p>
@@ -74,9 +75,10 @@
                 <input type="password" placeholder="********" class="input">
             </div>
             <div class="input-register">
-                <button>Register</button>
+                    <button class="input-rg">Register</button>
             </div>
-         </form>                
+         </form> 
+        </div>               
     </div>
 
 

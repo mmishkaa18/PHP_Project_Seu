@@ -10,7 +10,7 @@ body {
   background-color: white;
   margin: 0;
   height: 100vh;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .navbar {
@@ -71,6 +71,7 @@ body {
   border: 1.5px solid black;
   border-bottom-width: 2.5px;
   border-radius: 6px;
+  background-color: white;
 }
 
 /* .input-box {
@@ -93,6 +94,7 @@ body {
   position: relative;
   margin-top: 20px;
   top: 15px;
+  color: white;
 }
 
 .input-register {
@@ -101,4 +103,39 @@ body {
   text-align: center;
   margin-top: 50px;
   height: 40px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  height: 30px;
+  width: 110px;
+  margin-left: calc(20vh - 10px);
+  background-color: #e10600;
+  color: #e10600;
+}
+
+.input-register:hover {
+  cursor: pointer;
+  background-color: white;
+}
+
+
+.rg {
+  background-color:#110f18;
+  border-color: black;
+  border-width: 2px;
+  border-radius: 30px;
+  border-style: solid;
+  padding: 40px 40px;
+  margin-top: 20px;
+}
+
+.input-rg {
+  background-color: #e10600;
+  color: white;
+}
+
+.input-rg:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #e10600;
 }

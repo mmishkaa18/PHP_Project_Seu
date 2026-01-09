@@ -22,7 +22,7 @@
       <li><a href="#">Teams</a></li>
       <li><a href="#">Fantasy & Gaming</a></li>
       <li><a href="#">F1 Members' Area</a></li>
-      <li class="registration"><a href="registration.php">Registration</a></li>
+      <li class="registration"><a href="registration1.php">Registration</a></li>
     </ul>
   </div>
     </nav>
