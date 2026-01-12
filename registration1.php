@@ -31,10 +31,10 @@
     
     <div class="registration-form">
       <div class="rg">
-        <form action="drivers.php">
+        <form action="registerProcess.php" method="POST">
             <div class="input-box">
                 <p class="input-p">Title</p>
-                <select name="Select" class="input">
+                <select name="title" class="input">
                     <option value="">Select</option>
                     <option value="">Mr</option>
                     <option value="">Mrs</option>
@@ -44,19 +44,19 @@
             </div>
             <div class="input-box">
                 <p class="input-p">First Name</p>
-                <input type="text" placeholder="First Name" class="input">
+                <input type="text" name="firstname" placeholder="First Name" class="input">
             </div>
             <div class="input-box">
                 <p class="input-p">Last Name</p>
-                <input type="text" placeholder="Last Name" class="input">
+                <input type="text" name="lastname" placeholder="Last Name" class="input">
             </div>
             <div class="input-box">
                 <p class="input-p">Date of birth</p>
-                <input type="date" class="input">
+                <input type="date" name="birth_date" class="input">
             </div>
             <div class="input-box">
                 <p class="input-p">Country of residence</p>
-                <select name="" required class="input">
+                <select name="country" required class="input">
                     <option value="">Select</option>
 
                     <?php while ($row = mysqli_fetch_assoc($result)) { ?>
@@ -68,11 +68,11 @@
             </div>
             <div class="input-box">
                 <p class="input-p">Email address</p>
-                <input type="text" placeholder="Email address" class="input">
+                <input type="text" name="email" placeholder="Email address" class="input">
             </div>
             <div class="input-box">
                 <p class="input-p">Password</p>
-                <input type="password" placeholder="********" class="input">
+                <input type="password" name="password" placeholder="********" class="input">
             </div>
             <div class="input-register">
                     <button class="input-rg">Register</button>
@@ -80,8 +80,6 @@
          </form> 
         </div>               
     </div>
-
-
 </body>
 </html>
 

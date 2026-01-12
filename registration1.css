@@ -83,7 +83,7 @@ body {
 
 .input {
     margin-top: 20px;
-    border: 1.5px solid black;
+    border: 1px solid red;
     border-bottom-width: 2.5px;
     border-radius: 6px;
     height: 5vh;
