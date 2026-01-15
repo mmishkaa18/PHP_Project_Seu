@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 09, 2026 at 02:54 PM
+-- Generation Time: Jan 15, 2026 at 02:41 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -70,6 +70,37 @@ INSERT INTO `countries` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `drivers`
+--
+
+CREATE TABLE `drivers` (
+  `id` int(11) NOT NULL,
+  `first_name` varchar(50) NOT NULL,
+  `last_name` varchar(50) NOT NULL,
+  `driver_number` int(11) NOT NULL,
+  `team` varchar(50) NOT NULL,
+  `team_slug` varchar(20) NOT NULL,
+  `image` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `drivers`
+--
+
+INSERT INTO `drivers` (`id`, `first_name`, `last_name`, `driver_number`, `team`, `team_slug`, `image`) VALUES
+(1, 'Pierre', 'Gasly', 10, 'Alpine', 'alpine', 'gasly.avif'),
+(3, 'Fernando', 'Alonso', 14, 'Aston Martin', 'aston', 'alonso.avif'),
+(4, 'Franco', 'Colapinto', 1, 'Alpine', 'alpine', 'colapinto.avif'),
+(5, 'Lance', 'Stroll', 18, 'Aston Martin', 'aston', 'stroll.avif'),
+(6, 'Max', 'Verstappen', 1, 'Red Bull Racing', 'redbull', 'verstappen.avif'),
+(7, 'Lewis', 'Hamilton', 11, 'Scuderia Ferrari', 'ferrari', 'hamilton.avif'),
+(8, 'Charles', 'Leclerc', 16, 'Ferrari', 'ferrari', 'leclerc.avif'),
+(9, 'Carlos', 'Sainz', 55, 'Ferrari', 'ferrari', 'elMatador.avif'),
+(10, 'George', 'Russel', 63, 'Mercedes', 'mercedes', 'russel.avif');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -96,6 +127,12 @@ ALTER TABLE `countries`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `drivers`
+--
+ALTER TABLE `drivers`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -112,10 +149,16 @@ ALTER TABLE `countries`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
+-- AUTO_INCREMENT for table `drivers`
+--
+ALTER TABLE `drivers`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
