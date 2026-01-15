@@ -51,14 +51,14 @@ body {
     
 }
 
-.nav-p.active::after {
+.nav-inner1 .nav-p::after {
   content: "";
   position: absolute;
   left: 0;
   bottom: -14px;
   width: 100%;
   height: 3px;
-  color: #e10600;
+  background-color: #e10600;
 }
 
 .registration-form {
