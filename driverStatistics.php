@@ -16,7 +16,7 @@
   <nav class="navbar">
     <div class="nav-inner">
 
-      <a href="#" class="nav-logo">
+      <a href="drivers.php" class="nav-logo">
         <img src="images/F1.svg.png" alt="F1 Logo">
       </a>
 

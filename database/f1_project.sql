@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 15, 2026 at 02:41 PM
+-- Generation Time: Jan 15, 2026 at 09:42 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -101,6 +101,37 @@ INSERT INTO `drivers` (`id`, `first_name`, `last_name`, `driver_number`, `team`,
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `standings`
+--
+
+CREATE TABLE `standings` (
+  `id` int(11) NOT NULL,
+  `position` int(11) NOT NULL,
+  `driver` varchar(25) NOT NULL,
+  `country` varchar(25) NOT NULL,
+  `team` varchar(25) NOT NULL,
+  `points` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `standings`
+--
+
+INSERT INTO `standings` (`id`, `position`, `driver`, `country`, `team`, `points`) VALUES
+(5, 1, 'Max Verstappen', 'Netherlands', 'Red Bull Racing', 575),
+(6, 2, 'Lando Norris', 'United Kingdom', 'McLaren', 402),
+(7, 3, 'Charles Leclerc', 'Monaco', 'Ferrari', 389),
+(8, 4, 'Carlos Sainz', 'Spain', 'Ferrari', 348),
+(9, 5, 'Oscar Piastri', 'Australia', 'McLaren', 322),
+(10, 6, 'Sergio Perez', 'Mexico', 'Red Bull Racing', 285),
+(11, 7, 'George Russell', 'United Kingdom', 'Mercedes', 261),
+(12, 8, 'Lewis Hamilton', 'United Kingdom', 'Mercedes', 247),
+(13, 9, 'Fernando Alonso', 'Spain', 'Aston Martin', 198),
+(14, 10, 'Lance Stroll', 'Canada', 'Aston Martin', 172);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -117,6 +148,13 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `title`, `firstname`, `lastname`, `birth_date`, `country`, `email`, `password`, `created_at`) VALUES
+(4, '', 'sdf', 'sf', '2026-01-14', '12', 'sdf', 'sf', '2026-01-15 18:06:29');
+
+--
 -- Indexes for dumped tables
 --
 
@@ -130,6 +168,12 @@ ALTER TABLE `countries`
 -- Indexes for table `drivers`
 --
 ALTER TABLE `drivers`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `standings`
+--
+ALTER TABLE `standings`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -155,10 +199,16 @@ ALTER TABLE `drivers`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
+-- AUTO_INCREMENT for table `standings`
+--
+ALTER TABLE `standings`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
